@@ -208,11 +208,15 @@ def process_single_record(record, other_fields):
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument('--display=:99')
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--disable-software-rasterizer')
+    chrome_options.add_argument('--disable-extensions')
+    chrome_options.add_argument('--remote-debugging-port=9222')
+    chrome_options.add_argument('--window-size=1920,1080')
 
 
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=chrome_options)
-    driver.maximize_window()
 
     try:
         # Open form
