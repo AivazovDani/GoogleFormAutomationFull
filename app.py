@@ -6,6 +6,8 @@ from google_form_selenium_bulktext import main_bulk_text
 from zarkon_brand_registration import main_zbr
 from xeebi import main_xeebi
 from bulktext_brand_registration import main_bl
+import os
+from waitress import serve
 
 app = Flask(__name__) # our app instance
 
@@ -163,4 +165,5 @@ def run_bindtfn():
     return str(r.status_code)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5015)
+    port = int(os.environ.get("PORT", 8080))
+    serve(app, host="0.0.0.0", port=port)
