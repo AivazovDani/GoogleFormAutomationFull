@@ -2,19 +2,16 @@ FROM python:3.11-slim
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    # Chrome dependencies
     wget \
     gnupg \
     unzip \
     curl \
-    # Virtual display
     xvfb \
     x11vnc \
-    # noVNC dependencies
     novnc \
     websockify \
-    # misc
     supervisor \
+    x11-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Google Chrome (modern method)
@@ -34,13 +31,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy all project files
 COPY . .
 
-# Copy supervisor config (manages starting all services)
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+# Copy and make startup script executable
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
 # Expose ports
-# 5015 = Flask app
-# 6080 = noVNC web interface
 EXPOSE 5015 6080
 
-# Start everything via supervisor
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+# Start everything via startup script
+CMD ["/start.sh"]
