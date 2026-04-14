@@ -1,0 +1,231 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.container-campaigner{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+
+.container-xeebi-tfn{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+
+
+.container-bindtfn {
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.container-deliveryhub {
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+
+
+.container-bind-10dlc{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.container-d7{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.container-reve-tfn{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.container-tcr{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.container-bulktext{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+
+.container-zbr{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+
+.container-xeebi{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.container-bl{
+    max-width: 500px;
+    text-align: center;
+    background-color: bisque;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+input{
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button{
+    background-color:rgb(80, 80, 202);
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+#resultCampainger{
+    color: #5e5959;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.pnew{
+    font-size: 15px;
+    color: #000000;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+}

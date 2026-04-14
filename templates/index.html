@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Google Forms Automations</title>
+</head>
+<body>
+
+    <h1>Brand Submittion Automation Hub</h1>
+
+    <div class="container-campaigner">
+        <h1>Campaigner TFN</h1>
+        <input type="text" id="CampaingerField1" name="CampaingerField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="CampaingerField2" name="CampaingerField2">
+        <p class="pnew">Brand name in the Registration Table (example: Laxmaxs | BIND | TFN)</p>
+        <button onclick="runScript()" id="runBtn">Run</button>
+        <p id="resultCampainger">Display Results</p>
+    </div>
+
+    <div class="container-tcr">
+        <h1>Zarkon Campaign Registration (Both)</h1>
+        <input type="text" id="TCRField1" name="TCRField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="TCRField2" name="TCRField2">
+        <p class="pnew">Brand name in the Registration Table (example: Laxmaxs | BIND | TFN)</p>
+        <button onclick="runTCR()" id="runBtnTCR">Run</button>
+        <p id="resultTCR">Display Results</p>
+
+        <form id="myForm">
+            <select id="numberType" name="numberType">
+                <option value="10DLC">10DLC</option>
+                <option value="Short Code">Short Code</option>
+                <option value="Toll Free">Toll Free</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="container-bulktext">
+        <h1>Bulk Text Campaign Registration (Both)</h1>
+        <input type="text" id="BulkTextField1" name="BulkTextField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="BulkTextField2" name="BulkTextField2">
+        <p class="pnew">Brand name in the Registration Table (example: Laxmaxs | BIND | TFN)</p>
+        <button onclick="runBulkText()" id="runBtnBulkText">Run</button>
+        <p id="resultBulkText">Display Results</p>
+
+        <form id="myFormBulkText">
+            <select id="numberTypeBulkText" name="numberTypeBulkText">
+                <option value="10DLC">10DLC</option>
+                <option value="Short Code">Short Code</option>
+                <option value="Toll Free">Toll Free</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="container-zbr">
+        <h1>Zarkon Brand Registration (Both)</h1>
+        <input type="text" id="ZbrField1" name="ZbrField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="ZbrField2" name="ZbrField2">            
+        <p class="pnew">Brand name in the Registration Table (example: Laxmaxs | BIND | TFN)</p>
+        <button type="button" onclick="runZbr()" id="runBtnZbr">Run</button>
+        <p id="resultZbr">Display Results</p>
+        
+    </div>
+
+    <div class="container-xeebi">
+        <h1>Xeebi 10 DLC</h1>
+        <input type="text" id="XeebiField1" name="XeebiField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="XeebiField2" name="XeebiField2">
+        <p class="pnew">Brand name in the Registration Table (example: Laxmaxs | BIND | TFN)</p>
+        <button onclick="runXeebi()" id="runBtnXeebi">Run</button>
+        <p id="resultXeebi">Display Results</p>
+
+        <form id="myFormXeebi">
+            <select id="numberTypeXeebi" name="numberTypeXeebi">
+                <option value="Entertainment, including gaming and dating services">Entertainment, including gaming and dating services</option>
+                <option value="Information technology and information services">Information technology and information services</option>
+                <option value="Non-profit organization with valid tax-exempted status">Non-profit organization with valid tax-exempted status</option>
+            </select>
+        </form>
+    </div>
+    
+    <div class="container-bl">
+        <h1>Bulk Text Brand Registration (Both)</h1>
+        <input type="text" id="BlField1" name="BlField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="BlField2" name="BlField2">
+        <p class="pnew">Brand name in the Registration Table (example: Laxmaxs | BIND | TFN)</p>
+        <button onclick="runBl()" id="runBtnBl">Run</button>
+        <p id="resultBl">Display Results</p>
+
+        <form id="myFormBl">
+            <select id="numberTypeBl" name="numberTypeBl">
+                <option value="Education">Education</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Information Tech Services">Information Tech Services</option>
+            </select>
+        </form>
+    </div>
+
+
+
+    <div class="container-xeebi-tfn">
+        <h1>Xeebi TFN</h1>
+        <input type="text" id="XeebiTFNField1" name="XeebiTFNField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="XeebiTFNURL" name="XeebiTFNURL">
+        <p class="pnew">Enter the url of the dublicated google docs form</p>
+        <button onclick="runXebbiTFN()" id="runBtn">Run</button>
+        <p id="resultXeebiTFN">Display Results</p>
+    </div>
+
+    <div class="container-bind-10dlc">
+        <h1>Bind 10 DLC</h1>
+        <input type="text" id="Bind10DLC1" name="Bind10DLC1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <button onclick="runBind10DLC()" id="runBtn">Run</button>
+        <p id="resultBind10DLC">Display Results</p>
+    </div>
+
+    <div class="container-d7">
+        <h1>D7</h1>
+        <input type="text" id="D7Field1" name="D7Field1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="D7URL" name="D7URL">
+        <p class="pnew">Enter the url of the dublicated google docs form</p>
+        <button onclick="runD7()" id="runBtnD7">Run</button>
+        <p id="resultD7">Display Results</p>
+    </div>
+
+    <div class="container-reve-tfn">
+        <h1>Reve TFN</h1>
+        <input type="text" id="ReveTFNField1" name="ReveTFNField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="ReveTFNURL" name="ReveTFNURL">
+        <p class="pnew">Enter the url of the dublicated google docs form</p>
+        <button onclick="runReveTFN()" id="runBtnReve">Run</button>
+        <p id="resultReveTFN">Display Results</p>
+    </div>
+
+    <div class="container-deliveryhub">
+        <h1>DeliveryHub TFN</h1>
+        <input type="text" id="DeliveryHubField1" name="DeliveryHubField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="DeliveryHubURL" name="DeliveryHubURL">
+        <p class="pnew">Enter the url of the dublicated google docs form</p>
+        <button onclick="runDeliveryHub()" id="runBtnDeliveryHub">Run</button>
+        <p id="resultDeliveryHub">Display Results</p>
+    </div>
+
+    <div class="container-bindtfn">
+        <h1>Bind TFN</h1>
+        <input type="text" id="BindTFNField1" name="BindTFNField1">
+        <p class="pnew">Type the Brand name (example: Laxmaxs)</p>
+        <input type="text" id="BindTFNURL" name="BindTFNURL">
+        <p class="pnew">Enter the url of the dublicated google docs form</p>
+        <button onclick="runBindTFN()" id="runBtnBindTFN">Run</button>
+        <p id="resultBindTFN">Display Results</p>
+    </div>
+    
+</body>
+<script>
+    function runScript() {
+    const value1 = document.getElementById('CampaingerField1').value
+    const value2 = document.getElementById('CampaingerField2').value
+
+    const formData = new FormData()
+    formData.append('CampaingerField1', value1)
+    formData.append('CampaingerField2', value2)
+
+    document.getElementById('runBtn').disabled = true
+
+    fetch('/run', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(result => {
+        document.getElementById('resultCampainger').innerText = result
+        document.getElementById('runBtn').disabled = false
+    })
+}
+</script>
+
+<script>
+    function runTCR(){
+        const numberType = document.getElementById('numberType').value
+        const value1 = document.getElementById('TCRField1').value
+        const value2 = document.getElementById('TCRField2').value
+        
+        const formData = new FormData()
+        formData.append('TCRField1', value1)
+        formData.append('TCRField2', value2)
+        formData.append('numberType', numberType)
+
+        document.getElementById('runBtnTCR').disabled = true
+
+        fetch('/run-tcr', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.text())
+        .then(result => {
+            document.getElementById('resultTCR').innerText = result
+            document.getElementById('runBtnTCR').disabled = false
+        })
+
+    }
+</script>
+
+<script>
+    function runBulkText(){
+        const numberType = document.getElementById('numberTypeBulkText').value
+        const value1 = document.getElementById('BulkTextField1').value
+        const value2 = document.getElementById('BulkTextField2').value
+        
+        const formData = new FormData()
+        formData.append('BulkTextField1', value1)
+        formData.append('BulkTextField2', value2)
+        formData.append('numberTypeBulkText', numberType)
+
+        document.getElementById('runBtnBulkText').disabled = true
+
+        fetch('/run-bulk-text', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.text())
+        .then(result => {
+            document.getElementById('resultBulkText').innerText = result
+            document.getElementById('runBtnBulkText').disabled = false
+        })
+
+    }
+</script>
+
+<script>
+    function runZbr(){
+    const value1 = document.getElementById('ZbrField1').value
+    const value2 = document.getElementById('ZbrField2').value
+
+    const formData = new FormData()
+    formData.append('ZbrField1', value1)
+    formData.append('ZbrField2', value2)
+
+    document.getElementById('runBtnZbr').disabled = true
+
+    fetch('/run-zbr', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(result => {
+        document.getElementById('resultZbr').innerText = result
+        document.getElementById('runBtnZbr').disabled = false
+    }) 
+    }
+</script>
+
+<script>
+    function runXeebi(){
+        const numberType = document.getElementById('numberTypeXeebi').value
+        const value1 = document.getElementById('XeebiField1').value
+        const value2 = document.getElementById('XeebiField2').value
+        
+        const formData = new FormData()
+        formData.append('XeebiField1', value1)
+        formData.append('XeebiField2', value2)
+        formData.append('numberTypeXeebi', numberType)
+
+        document.getElementById('runBtnXeebi').disabled = true
+
+        fetch('/run-xeebi', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.text())
+        .then(result => {
+            document.getElementById('resultXeebi').innerText = result
+            document.getElementById('runBtnXeebi').disabled = false
+        })
+
+    }
+</script>
+
+<script>
+    function runBl(){
+        const numberType = document.getElementById('numberTypeBl').value
+        const value1 = document.getElementById('BlField1').value
+        const value2 = document.getElementById('BlField2').value
+        
+        const formData = new FormData()
+        formData.append('BlField1', value1)
+        formData.append('BlField2', value2)
+        formData.append('numberTypeBl', numberType)
+
+        document.getElementById('runBtnBl').disabled = true
+
+        fetch('/run-bl', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.text())
+        .then(result => {
+            document.getElementById('resultBl').innerText = result
+            document.getElementById('runBtnBl').disabled = false
+        })
+    }
+</script>
+
+<script>
+    function runXebbiTFN() {
+    const value1 = document.getElementById('XeebiTFNField1').value
+    const url = document.getElementById('XeebiTFNURL').value
+
+    const formData = new FormData()
+    formData.append('XeebiTFNField1', value1)
+    formData.append('XeebiTFNURL', url)
+
+    document.getElementById('runBtn').disabled = true
+
+    fetch('/run-xeebi-tfn', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(result => {
+        document.getElementById('resultXeebiTFN').innerText = result
+        document.getElementById('runBtn').disabled = false
+    })
+}
+</script>
+
+<script>
+    function runBind10DLC() {
+    const value1 = document.getElementById('Bind10DLC1').value
+
+    const formData = new FormData()
+    formData.append('Bind10DLC1', value1)
+
+    document.getElementById('runBtn').disabled = true
+
+    fetch('/run-bind-10dlc', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(result => {
+        document.getElementById('resultBind10DLC').innerText = result
+        document.getElementById('runBtn').disabled = false
+    })
+}
+</script>
+
+<script>
+    function runD7() {
+    const value1 = document.getElementById('D7Field1').value
+    const url = document.getElementById('D7URL').value
+
+    const formData = new FormData()
+    formData.append('D7Field1', value1)
+    formData.append('D7URL', url)
+
+    document.getElementById('runBtnD7').disabled = true
+
+    fetch('/run-d7', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(result => {
+        document.getElementById('resultD7').innerText = result
+        document.getElementById('runBtnD7').disabled = false
+    })
+}
+</script>
+
+<script>
+    function runReveTFN() {
+    const value1 = document.getElementById('ReveTFNField1').value
+    const url = document.getElementById('ReveTFNURL').value
+
+    const formData = new FormData()
+    formData.append('ReveTFNField1', value1)
+    formData.append('ReveTFNURL', url)
+
+    document.getElementById('runBtnReve').disabled = true
+
+    fetch('/run-reve-tfn', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(result => {
+        document.getElementById('resultReveTFN').innerText = result
+        document.getElementById('runBtnReve').disabled = false
+    })
+}
+</script>
+
+<script>
+    function runDeliveryHub() {
+    const value1 = document.getElementById('DeliveryHubField1').value
+    const url = document.getElementById('DeliveryHubURL').value
+
+    const formData = new FormData()
+    formData.append('DeliveryHubField1', value1)
+    formData.append('DeliveryHubURL', url)
+
+    document.getElementById('runBtnDeliveryHub').disabled = true
+
+    fetch('/run-deliveryhub', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(result => {
+        document.getElementById('resultDeliveryHub').innerText = result
+        document.getElementById('runBtnDeliveryHub').disabled = false
+    })
+}
+</script>
+
+<script>
+function runBindTFN() {
+    const value1 = document.getElementById('BindTFNField1').value
+    const url = document.getElementById('BindTFNURL').value
+
+    const formData = new FormData()
+    formData.append('BindTFNField1', value1)
+    formData.append('BindTFNURL', url)
+
+    document.getElementById('runBtnBindTFN').disabled = true
+
+    fetch('/run-bindtfn', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.text())
+    .then(result => {
+        document.getElementById('resultBindTFN').innerText = result
+        document.getElementById('runBtnBindTFN').disabled = false
+    })
+}
+</script>
+</html>
