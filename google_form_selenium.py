@@ -214,7 +214,7 @@ def process_single_record(record, other_fields):
     chrome_options.add_experimental_option('useAutomationExtension', False)
     
     # Keep these exactly as they are
-    service = Service(ChromeDriverManager().install())
+    service = Service('/usr/bin/chromedriver')
     driver = webdriver.Chrome(service=service, options=chrome_options)
 
     try:
